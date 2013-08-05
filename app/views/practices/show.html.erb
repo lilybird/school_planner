@@ -2,12 +2,12 @@
 
 <p>
   <strong>Group:</strong>
-  <%= @practice.group_id %>
+  <%= @practice.group.name %>
 </p>
 
 <p>
   <strong>Day:</strong>
-  <%= @practice.day_id %>
+  <%= @practice.day.day %>
 </p>
 
 <%= link_to 'Edit', edit_practice_path(@practice) %> |

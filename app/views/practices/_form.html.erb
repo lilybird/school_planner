@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :group_id %><br>
-    <%= f.number_field :group_id %>
+    <%= f.select( :group_id, options_from_collection_for_select(Group.all, :id, :name)) %>
   </div>
   <div class="field">
     <%= f.label :day_id %><br>
-    <%= f.number_field :day_id %>
+    <%= f.select( :day_id, options_from_collection_for_select(Day.all, :id, :day)) %>
   </div>
   <div class="actions">
     <%= f.submit %>
