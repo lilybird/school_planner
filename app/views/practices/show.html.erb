@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @practice.group_id %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @practice.day_id %>
+</p>
+
+<%= link_to 'Edit', edit_practice_path(@practice) %> |
+<%= link_to 'Back', practices_path %>
