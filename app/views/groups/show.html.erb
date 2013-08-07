@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
+<div class="page-header">
+  <h1><%= @group.name %> <small>group name</small></h1>
+</div>
+
+<strong>Practices:</strong>
+<% @group.practices.each do |practice| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= practice.day.day %></h4>
+	  </div>
+	</div>
+<% end %>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @test.subject %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @test.course.name %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @test.day.day %>
+</p>
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>

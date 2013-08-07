@@ -1,4 +1,8 @@
 SchoolPlanner::Application.routes.draw do
+  resources :projects
+
+  resources :tests
+
   resources :homeworks
 
   resources :courses

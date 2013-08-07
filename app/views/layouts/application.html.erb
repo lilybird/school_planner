@@ -8,7 +8,22 @@
 </head>
 <body>
 
+<div class="navbar">
+  <a class="navbar-brand" href="#">planner</a>
+  <ul class="nav navbar-nav">
+    <li><a href="<%= days_url %>">days</a></li>
+    <li><a href="<%= groups_url %>">groups</a></li>
+    <li><a href="<%= practices_url %>">practices</a></li>
+    <li><a href="<%= homeworks_url %>">homework</a></li>
+    <li><a href="<%= courses_url %>">courses</a></li>
+    <li><a href="<%= tests_url %>">tests</a></li>
+    <li><a href="<%= projects_url %>">projects</a></li>
+  </ul>
+</div>
+
+<div class="container">
 <%= yield %>
+</div>
 
 </body>
 </html>

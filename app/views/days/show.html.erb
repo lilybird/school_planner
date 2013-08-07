@@ -1,9 +1,49 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Day:</strong>
-  <%= @day.day %>
-</p>
+
+<div class="page-header">
+  <h1><%= @day.day %> <small>date</small></h1>
+</div>
+
+<strong>Tests:</strong>
+<% @day.tests.each do |test| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= test.subject %></h4>
+	    <p class="list-group-item-text"><%= test.course.name %></p>
+	  </div>
+	</div>
+<% end %>
+
+<strong>Homework:</strong>
+<% @day.homeworks.each do |homework| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= homework.assignment %></h4>
+	    <p class="list-group-item-text"><%= homework.course.name %></p>
+	  </div>
+	</div>
+<% end %>
+
+<strong>Projects:</strong>
+<% @day.projects.each do |project| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= project.name %></h4>
+	    <p class="list-group-item-text"><%= project.requirements %></p>
+	    <p class="list-group-item-text"><%= project.course.name %></p>
+	  </div>
+	</div>
+<% end %>
+
+<strong>Practices:</strong>
+<% @day.practices.each do |practice| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= practice.group.name %></h4>
+	  </div>
+	</div>
+<% end %>
 
 <%= link_to 'Edit', edit_day_path(@day) %> |
 <%= link_to 'Back', days_path %>

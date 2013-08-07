@@ -1,9 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
+<div class="page-header">
+  <h1><%= @course.name %> <small>course name</small></h1>
+</div>
+
+<strong>Assignments:</strong>
+<% @course.homeworks.each do |homework| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= homework.assignment %></h4>
+		<p class="list-group-item-text"><%= homework.day.day %></p>
+	  </div>
+	</div>
+<% end %>
+
+<strong>Tests:</strong>
+<% @course.tests.each do |test| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= test.subject %></h4>
+		<p class="list-group-item-text"><%= test.day.day %></p>
+	  </div>
+	</div>
+<% end %>
+
+<strong>Projects:</strong>
+<% @course.projects.each do |project| %>
+	<div class="list-group">
+	  <div class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= project.name %></h4>
+		<p class="list-group-item-text"><%= project.requirements %></p>
+		<p class="list-group-item-text"><%= project.day.day %></p>
+	  </div>
+	</div>
+<% end %>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

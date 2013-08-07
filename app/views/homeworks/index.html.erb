@@ -1,6 +1,6 @@
 <h1>Listing homeworks</h1>
 
-<table>
+<table class="table content-table">
   <thead>
     <tr>
       <th>Assignment</th>
@@ -16,11 +16,11 @@
     <% @homeworks.each do |homework| %>
       <tr>
         <td><%= homework.assignment %></td>
-        <td><%= homework.days_id %></td>
-        <td><%= homework.course_id %></td>
-        <td><%= link_to 'Show', homework %></td>
-        <td><%= link_to 'Edit', edit_homework_path(homework) %></td>
-        <td><%= link_to 'Destroy', homework, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= homework.day.day %></td>
+        <td><%= homework.course.name %></td>
+        <td><%= link_to 'Show', homework, :class => 'btn btn-default btn-small' %></td>
+        <td><%= link_to 'Edit', edit_homework_path(homework), :class => 'btn btn-warning btn-small' %></td>
+        <td><%= link_to 'Destroy', homework, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-small' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Homework', new_homework_path %>
+<%= link_to 'New Homework', new_homework_path, :class => 'btn btn-primary btn-large' %>

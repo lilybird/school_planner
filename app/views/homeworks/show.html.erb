@@ -7,12 +7,12 @@
 
 <p>
   <strong>Days:</strong>
-  <%= @homework.days_id %>
+  <%= @homework.day.day %>
 </p>
 
 <p>
   <strong>Course:</strong>
-  <%= @homework.course_id %>
+  <%= @homework.course.name %>
 </p>
 
 <%= link_to 'Edit', edit_homework_path(@homework) %> |
