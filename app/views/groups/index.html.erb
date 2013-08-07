@@ -1,6 +1,6 @@
 <h1>Listing groups</h1>
 
-<table>
+<table class="table content-table">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,9 +14,9 @@
     <% @groups.each do |group| %>
       <tr>
         <td><%= group.name %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', group,:class => 'btn btn-default btn-small' %></td>
+        <td><%= link_to 'Edit', edit_group_path(group), :class => 'btn btn-warning btn-small' %></td>
+        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-small' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Group', new_group_path %>
+<%= link_to 'New Group', new_group_path, :class => 'btn btn-primary btn-large' %>

@@ -1,6 +1,6 @@
 <h1>Listing practices</h1>
 
-<table>
+<table class="table content-table">
   <thead>
     <tr>
       <th>Group</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= practice.group.name %></td>
         <td><%= practice.day.day %></td>
-        <td><%= link_to 'Show', practice %></td>
-        <td><%= link_to 'Edit', edit_practice_path(practice) %></td>
-        <td><%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', practice, :class => 'btn btn-default btn-small' %></td>
+        <td><%= link_to 'Edit', edit_practice_path(practice), :class => 'btn btn-warning btn-small' %></td>
+        <td><%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-small' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Practice', new_practice_path %>
+<%= link_to 'New Practice', new_practice_path, :class => 'btn btn-primary btn-large' %>
