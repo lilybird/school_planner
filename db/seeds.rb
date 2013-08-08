@@ -36,43 +36,62 @@ d7 = Day.new
 d7.day = '2013-8-11'
 d7.save
 
-groups_hash = [ 'Tennis', 'Spell Bowl', 'Student Council', 'Ballet']
-
 Group.destroy_all
-groups_hash.each do |group|
-	g = Group.new
-	g.name = group
-	g.save
-end
 
-courses_hash = ['APUSH', 'Pre-Calculus Trig', 'Chemistry']
+g1 = Group.new
+g1.name = 'Tennis'
+g1.save
+
+g2 = Group.new
+g2.name = 'Spell Bowl'
+g2.save
+
+g3 = Group.new
+g3.name = 'Student Council'
+g3.save
+
+g4 = Group.new
+g4.name = 'Ballet'
+g4.save
 
 Course.destroy_all
-courses_hash.each do |course|
-	c = Course.new
-	c.name = course
-	c.save
-end
+
+c1 = Course.new
+c1.name = 'APUSH'
+c1.save
+
+c2 = Course.new
+c2.name = 'Pre-Calculus Trig'
+c2.save
+
+c3 = Course.new
+c3.name = 'Chemistry'
+c3.save
 
 Homework.destroy_all
 h = Homework.new
 h.assignment = 'Key Terms Chapters 1-10'
-h.day_id = d1[id]
+h.day_id = d1.id
+h.course_id = c1.id
 h.save
 
 Practice.destroy_all
 p = Practice.new
-p = d2[id]
+p.day_id = d2.id
+p.group_id = g1.id
 p.save
 
 Project.destroy_all
 pr = Project.new
-pr.name = 'test project'
-pr.day_id = d3[id]
+pr.name = 'Extra Credit'
+pr.requirements = 'Outline for chapters 1-10'
+pr.day_id = d3.id
+pr.course_id = c1.id
 pr.save
 
 Test.destroy_all
 t = Test.new
-t.subject = 'test subject'
-t.day_id = d4[id]
+t.subject = 'Chapters 1-5 Test'
+t.day_id = d4.id
+t.course_id = c1.id
 t.save
