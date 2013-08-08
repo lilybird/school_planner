@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h1>school planner</h1>
+  <p>week</p>
+</div>
+
+<% @days.each do |day| %>
+	<div class="well">
+		<div class="page-header">
+  			<h1><%= @day_of_week[(day.day.cwday - 1)] %><small> <%= day.day %></small></h1>
+		</div>
+	</div>
+<% end %>
+

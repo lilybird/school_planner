@@ -2816,7 +2816,7 @@ button.close {
 
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
-  color: #333333;
+  color: #ffffff;
   background-color: transparent;
 }
 
@@ -2970,16 +2970,16 @@ button.close {
 }
 
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #696969;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #999999;
+  color: #97ffff;
 }
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  color: #97ffff;
   background-color: transparent;
 }
 
@@ -2988,7 +2988,7 @@ button.close {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #ababab;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,

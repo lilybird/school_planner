@@ -1,4 +1,6 @@
 SchoolPlanner::Application.routes.draw do
+  root 'calendars#week'
+
   resources :projects
 
   resources :tests
