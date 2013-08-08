@@ -1,12 +1,12 @@
 <%= form_for(@day) do |f| %>
   <% if @day.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@day.errors.count, "error") %> prohibited this day from being saved:</h2>
-
+    <div class="alert">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong><%= pluralize(@day.errors.count, "error") %> prohibited this test from being saved:</strong> 
       <ul>
-      <% @day.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @day.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

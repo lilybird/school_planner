@@ -4,7 +4,7 @@
   <h1><%= @course.name %> <small>course name</small></h1>
 </div>
 
-<strong>Assignments:</strong>
+<p class="lead">Assignments:</p>
 <% @course.homeworks.each do |homework| %>
 	<div class="list-group">
 	  <div class="list-group-item">
@@ -14,7 +14,7 @@
 	</div>
 <% end %>
 
-<strong>Tests:</strong>
+<p class="lead">Tests:</p>
 <% @course.tests.each do |test| %>
 	<div class="list-group">
 	  <div class="list-group-item">
@@ -24,7 +24,7 @@
 	</div>
 <% end %>
 
-<strong>Projects:</strong>
+<p class="lead">Projects:</p>
 <% @course.projects.each do |project| %>
 	<div class="list-group">
 	  <div class="list-group-item">

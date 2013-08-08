@@ -1,6 +1,5 @@
 <div class="jumbotron">
   <h1>school planner</h1>
-  <p>week</p>
 </div>
 
 <% @days.each do |day| %>
@@ -8,6 +7,30 @@
 		<div class="page-header">
   			<h1><%= @day_of_week[(day.day.cwday - 1)] %><small> <%= day.day %></small></h1>
 		</div>
+		<ul class="list-group">
+		  	<li class="list-group-item">
+		  		<% day.homeworks.each do |homework| %>
+		  			<%= homework.assignment %>
+		  			(<%= homework.course.name %>)
+		  		<% end %>
+			</li>
+		  	<li class="list-group-item">
+		  		<% day.tests.each do |test| %>
+		  			<%= test.subject %>
+		  			(<%= test.course.name %>)
+				<% end %>
+			</li>
+		  	<li class="list-group-item">
+		  		<% day.projects.each do |project| %>
+		  			<%= project.name %>
+		  			(<%= project.course.name %>)
+				<% end %>
+			</li>
+		 	<li class="list-group-item">
+		  		<% day.practices.each do |practice| %>
+		  			<%= practice.group.name %>
+				<% end %>
+			</li>
 	</div>
 <% end %>
 

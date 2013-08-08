@@ -5,7 +5,7 @@
   <h1><%= @day.day %> <small>date</small></h1>
 </div>
 
-<strong>Tests:</strong>
+<p class="lead">Tests:</p>
 <% @day.tests.each do |test| %>
 	<div class="list-group">
 	  <div class="list-group-item">
@@ -15,7 +15,7 @@
 	</div>
 <% end %>
 
-<strong>Homework:</strong>
+<p class="lead">Homework:</p>
 <% @day.homeworks.each do |homework| %>
 	<div class="list-group">
 	  <div class="list-group-item">
@@ -25,7 +25,7 @@
 	</div>
 <% end %>
 
-<strong>Projects:</strong>
+<p class="lead">Projects:</p>
 <% @day.projects.each do |project| %>
 	<div class="list-group">
 	  <div class="list-group-item">
@@ -36,7 +36,7 @@
 	</div>
 <% end %>
 
-<strong>Practices:</strong>
+<p class="lead">Practices:</p>
 <% @day.practices.each do |practice| %>
 	<div class="list-group">
 	  <div class="list-group-item">

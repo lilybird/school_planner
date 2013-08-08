@@ -1,12 +1,12 @@
 <%= form_for(@homework) do |f| %>
   <% if @homework.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@homework.errors.count, "error") %> prohibited this homework from being saved:</h2>
-
+    <div class="alert">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong><%= pluralize(@homework.errors.count, "error") %> prohibited this test from being saved:</strong> 
       <ul>
-      <% @homework.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @homework.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :day_id %><br>
-    <%= f.number_field :day_id %>
+    <%= f.select :day_id, options_from_collection_for_select(Day.all, :id, :day) %>
   </div>
   <div class="field">
     <%= f.label :course_id %><br>
-    <%= f.number_field :course_id %>
+    <%= f.select :course_id, options_from_collection_for_select(Course.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

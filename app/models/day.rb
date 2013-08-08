@@ -3,4 +3,6 @@ class Day < ActiveRecord::Base
 	has_many :projects
 	has_many :tests 
 	has_many :homeworks
+
+	validates :day, presence: true	
 end
