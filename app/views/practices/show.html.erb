@@ -2,13 +2,27 @@
 
 <p>
   <p class="lead">Group:</p>
-  <%= @practice.group.name %>
+  	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @practice.group.name %></h4>
+	 </div>
+	</div>
 </p>
+
+
 
 <p>
   <p class="lead">Day:</p>
-  <%= @practice.day.day %>
+	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @practice.day.day %></h4>
+	 </div>
+	</div>  
 </p>
 
-<%= link_to 'Edit', edit_practice_path(@practice) %> |
-<%= link_to 'Back', practices_path %>
+
+
+<hr></hr>
+
+<%= link_to 'edit', edit_practice_path(@practice) %> |
+<%= link_to 'back', practices_path %>

@@ -14,6 +14,7 @@
 	  </div>
 	</div>
 <% end %>
+<p><%= link_to 'add test', new_test_path(@day.tests) %></p>
 
 <p class="lead">Homework:</p>
 <% @day.homeworks.each do |homework| %>
@@ -24,6 +25,7 @@
 	  </div>
 	</div>
 <% end %>
+<p><%= link_to 'add homework', new_homework_path(@day.homeworks) %></p>
 
 <p class="lead">Projects:</p>
 <% @day.projects.each do |project| %>
@@ -35,6 +37,7 @@
 	  </div>
 	</div>
 <% end %>
+<p><%= link_to 'add project', new_project_path(@day.projects) %></p>
 
 <p class="lead">Practices:</p>
 <% @day.practices.each do |practice| %>
@@ -44,6 +47,9 @@
 	  </div>
 	</div>
 <% end %>
+<p><%= link_to 'add practice', new_practice_path(@day.practices) %></p>
 
-<%= link_to 'Edit', edit_day_path(@day) %> |
-<%= link_to 'Back', days_path %>
+<hr></hr>
+
+<%= link_to 'edit', edit_day_path(@day) %> |
+<%= link_to 'back', days_path %>

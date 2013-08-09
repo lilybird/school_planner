@@ -2,18 +2,32 @@
 
 <p>
   <p class="lead">Assignment:</p>
-  <%= @homework.assignment %>
+	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @homework.assignment %></h4>
+	 </div>
+	</div>  
 </p>
 
 <p>
   <p class="lead">Day:</p>
-  <%= @homework.day.day %>
+	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @homework.day.day %></h4>
+	 </div>
+	</div>   
 </p>
 
 <p>
   <p class="lead">Course:</p>
-  <%= @homework.course.name %>
+	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @homework.course.name %></h4>
+	 </div>
+	</div>  
 </p>
 
-<%= link_to 'Edit', edit_homework_path(@homework) %> |
-<%= link_to 'Back', homeworks_path %>
+<hr></hr>   
+
+<%= link_to 'edit', edit_homework_path(@homework) %> |
+<%= link_to 'back', homeworks_path %>

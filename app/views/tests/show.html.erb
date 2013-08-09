@@ -2,18 +2,32 @@
 
 <p>
   <p class="lead">Subject:</p>
-  <%= @test.subject %>
+  	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @test.subject %></h4>
+	 </div>
+	</div>  
 </p>
 
 <p>
   <p class="lead">Course:</p>
-  <%= @test.course.name %>
+  	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @test.course.name %></h4>
+	 </div>
+	</div>   
 </p>
 
 <p>
   <p class="lead">Day:</p>
-  <%= @test.day.day %>
+  	<div class="list-group">
+	 <div class="list-group-item">
+	   <h4 class="list-group-item-heading"><%= @test.day.day %></h4>
+	 </div>
+	</div>  
 </p>
 
-<%= link_to 'Edit', edit_test_path(@test) %> |
-<%= link_to 'Back', tests_path %>
+<hr></hr>
+
+<%= link_to 'edit', edit_test_path(@test) %> |
+<%= link_to 'back', tests_path %>
