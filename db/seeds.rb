@@ -70,8 +70,38 @@ c3.save
 
 Homework.destroy_all
 h = Homework.new
-h.assignment = 'Key Terms Chapters 1-10'
+h.assignment = 'Key Terms Chapters 1'
 h.day_id = d1.id
+h.course_id = c1.id
+h.save
+
+h = Homework.new
+h.assignment = 'Key Terms Chapters 2'
+h.day_id = d2.id
+h.course_id = c1.id
+h.save
+
+h = Homework.new
+h.assignment = 'Worksheet 1-5'
+h.day_id = d3.id
+h.course_id = c2.id
+h.save
+
+h = Homework.new
+h.assignment = 'Lab Report'
+h.day_id = d4.id
+h.course_id = c3.id
+h.save
+
+h = Homework.new
+h.assignment = 'Key Terms Chapters 3'
+h.day_id = d5.id
+h.course_id = c1.id
+h.save
+
+h = Homework.new
+h.assignment = 'Key Terms Chapters 4'
+h.day_id = d6.id
 h.course_id = c1.id
 h.save
 
@@ -79,6 +109,41 @@ Practice.destroy_all
 p = Practice.new
 p.day_id = d2.id
 p.group_id = g1.id
+p.save
+
+p = Practice.new
+p.day_id = d1.id
+p.group_id = g3.id
+p.save
+
+p = Practice.new
+p.day_id = d3.id
+p.group_id = g2.id
+p.save
+
+p = Practice.new
+p.day_id = d4.id
+p.group_id = g4.id
+p.save
+
+p = Practice.new
+p.day_id = d4.id
+p.group_id = g1.id
+p.save
+
+p = Practice.new
+p.day_id = d5.id
+p.group_id = g4.id
+p.save
+
+p = Practice.new
+p.day_id = d6.id
+p.group_id = g1.id
+p.save
+
+p = Practice.new
+p.day_id = d7.id
+p.group_id = g4.id
 p.save
 
 Project.destroy_all
@@ -94,4 +159,10 @@ t = Test.new
 t.subject = 'Chapters 1-5 Test'
 t.day_id = d4.id
 t.course_id = c1.id
+t.save
+
+t = Test.new
+t.subject = 'Chapter 1'
+t.day_id = d2.id
+t.course_id = c3.id
 t.save
